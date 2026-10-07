@@ -4,9 +4,8 @@ A Chrome extension that shows `+/-` line counts for only the files you filter on
 
 GitHub lets you filter a PR's changed files by extension (for example, hide `.md` files). The header still shows the totals for every file. This extension adds the filtered totals next to them:
 
-```
-+1,035 -24 ▮▮▮▮▮ (+473 −17)
-```
+<img width="528" height="205" alt="image" src="https://github.com/user-attachments/assets/e1870200-93f5-4158-843d-b3dabf00e46f" />
+
 
 ## How it works
 
