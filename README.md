@@ -18,7 +18,7 @@ GitHub lets you filter a PR's changed files by extension (for example, hide `.md
 
 It only handles extension filters. Other filters, such as hiding viewed files, don't change the totals.
 
-## Install
+## Install as a Chrome extension
 
 1. Open `chrome://extensions` and turn on **Developer mode**.
 2. Click **Load unpacked** and pick this folder.
@@ -26,3 +26,16 @@ It only handles extension filters. Other filters, such as hiding viewed files, d
 4. Paste a GitHub token and click **Save**. You need one for private repos. `gh auth token | pbcopy` copies yours.
 
 After you change the code, click the reload icon on the extension card and refresh the PR tab.
+
+## Install with Tampermonkey
+
+The same logic lives in `github-pr-filter-counter.user.js`.
+
+1. Open the Tampermonkey dashboard and click the **+** tab to create a new script.
+2. Replace the template with the contents of `github-pr-filter-counter.user.js` and save.
+3. Open any GitHub page, click the Tampermonkey icon, and pick **Set GitHub token**.
+4. Paste your token and click **OK**.
+
+The repo is private, so Tampermonkey can't install the script from its raw URL. Paste it in instead.
+
+If you change `content.js`, make the same change in the userscript. Only the token storage differs.
